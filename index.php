@@ -7,15 +7,17 @@
 </head>
 <body>
     <h1>Form Pendaftaran UKM</h1>
-    <form action="proses_daftar.php" method="Post">
+    <form action="proses_daftar.php" method="POST">
         <input type="text" name="var_npm" placeholder = "Input NPM">
+        <br/><br/>
+        <input type="text", name="var_nama" placeholder = "Input Nama">
         <br/><br/>
         Pilihan UKM :
         <select name="var_ukm">
-            <option value="">UKM Programming</option>
-            <option value="">UKM Band</option>
-            <option value="">UKM Futsal</option>
-            <option value="">UKM Basket</option>
+            <option>UKM Programming</option>
+            <option>UKM Band</option>
+            <option>UKM Futsal</option>
+            <option>UKM Basket</option>
         </select>
         <br/><br/>
         <input type="submit" value="Daftar"/>
