@@ -25,18 +25,15 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="var_npm" class="form-label"><strong>Nomor Pengenal Mahasiswa (NPM):</strong></label>
-                    <?php
-                    echo $tangkap_npm;?>
+                    <?= $tangkap_npm;?>
                 </div>
                 <div class="mb-3">
                     <label for="var_nama" class="form-label"><strong>Nama Lengkap Mahasiswa:</strong></label>
-                    <?php
-                    echo $tangkap_nama;?>
+                    <?= $tangkap_nama;?>
                 </div>
                 <div class="mb-3">
                     <label for="var_npm" class="form-label"><strong>Unit Kegiatan Mahasiswa (UKM) yang Diikuti:</strong></label>
-                    <?php
-                    echo $tangkap_ukm;?>
+                    <?= $tangkap_ukm;?>
                 </div>
             </div>
             <div class="card-footer">
