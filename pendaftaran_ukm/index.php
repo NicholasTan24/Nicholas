@@ -34,7 +34,7 @@
                     <td><?php echo $ambildata["UKM"]; ?></td>
                     <td><?php echo $ambildata["Created_at"]; ?></td>
                     <td>
-                        <a href="ubah.php">Ubah</a>
+                        <a href="ubah.php?kirim_npm=<?php echo $ambildata["NPM"]; ?>">Ubah</a>
                         <a href="proses-hapus.php?kirim_npm=<?php echo $ambildata["NPM"]; ?>">Hapus</a>
                     </td>
                 </tr>

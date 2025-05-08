@@ -9,7 +9,7 @@
     <h1>Data Pendaftaran UKM</h1>
     <p><a href="index.php">Kembali</a></p>
 
-    <form action="proses-daftar.php" method="POST">
+    <form action="proses_daftar.php" method="POST">
         <table>
             <tr>
                 <td>NPM</td>
