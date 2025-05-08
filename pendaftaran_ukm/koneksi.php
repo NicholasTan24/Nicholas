@@ -4,9 +4,10 @@ $user = "root";
 $pass = "";
 $dbname = "db_ukm";
 
-$connect = mysqli_connect($host,$user,$pass,$dbname) or die('Database Tidak Terhubung');
+$conn = mysqli_connect($host, $user, $pass, $dbname) or die('Database Tidak Terhubung');
+
 // Check connection
-if ($connect -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $connect -> connect_error;
-    exit();
-  }
+if ($conn -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $conn -> connect_error;
+  exit();
+}

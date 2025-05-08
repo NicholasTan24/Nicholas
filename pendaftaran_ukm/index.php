@@ -20,32 +20,32 @@
 
         <?php
         include("koneksi.php");
-        $perintah = "SELECT * FROM tbl_pendaftaran";
-        $eksekusi = mysqli_query($connect,$perintah);
+        $perintah = "SELECT * FROM tbl_pendaftaran ORDER BY created_at DESC";
+        $eksekusi = mysqli_query($conn, $perintah);
+
         if($eksekusi){
             $i=1;
             while($ambildata = mysqli_fetch_array($eksekusi)){
-               ?>
-               <tr>
-                <td><?php echo $i ?></td>
-                <td><?php echo $ambildata["NPM"]; ?></td>
-                <td><?php echo $ambildata["Nama"]; ?></td>
-                <td><?php echo $ambildata["UKM"]; ?></td>
-                <td><?php echo $ambildata["Created_at"]; ?></td>
-                <td>
-                    <a href="ubah.php">Ubah</a>
-                    <a href="proses-hapus.php">Hapus</a>
-                </td>
-               </tr>
-               <?php
-               $i++;
+                ?>
+                <tr>
+                    <td><?php echo $i; ?></td>
+                    <td><?php echo $ambildata["NPM"]; ?></td>
+                    <td><?php echo $ambildata["Nama"]; ?></td>
+                    <td><?php echo $ambildata["UKM"]; ?></td>
+                    <td><?php echo $ambildata["Created_at"]; ?></td>
+                    <td>
+                        <a href="ubah.php">Ubah</a>
+                        <a href="proses-hapus.php?kirim_npm=<?php echo $ambildata["NPM"]; ?>">Hapus</a>
+                    </td>
+                </tr>
+                <?php
+                $i++;
             }
             $eksekusi->free_result();
         }
-        $connect->close();
-        ?>
 
-        
+        $conn->close();
+        ?>
     </table>
 </body>
 </html>
